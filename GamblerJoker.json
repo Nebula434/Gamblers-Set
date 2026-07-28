@@ -1,0 +1,14 @@
+{
+	"id": "gambler_set",
+	"name": "Gambler's Hand",
+	"display_name": "GH",
+	"author": ["Nebula434"],
+	"description": "Joker's and future seals to use that give a Gambler vibe. WIP",
+	"prefix": "Gambler",
+	"main_file": "GamblerJoker.lua",
+	"priority": 0,
+	"badge_colour":"f84ea6",
+	"badge_text_colour": "#ffffff",
+	"version": "1.0.0",
+	"dependencies": []
+}
