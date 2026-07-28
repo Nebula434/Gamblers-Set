@@ -26,5 +26,24 @@ SMODS.Joker{
             '{C:green}#1# in #4#{} chance to do nothing"
         }
     config = {extra = {mult = 3, chips = 100, x_mult = 3, chance = 4}}, --- TODO VERIFY CHANCE WORKS PROPERLY
+    loc_vars = function(self, info_queue, card)
+		return { vars = { card.ability.extra.mult, card.ability.extra.chips, card.ability.extra.x_mult, card.ability.extra.chance } }
+	end,
+        rarity = 2,
+        atlas = "gambler_set",
+        pos = {x = 0, y = 0},
+        cost = 4,
+        calculate = function(self, info_queue, card)
+            local rolled = math.random(1, 4)
+            if rolled == 1 then
+                card.ability.extra.mult = 2
+            elseif rolled == 2 then
+                card.ability.extra.chips = 100
+            elseif rolled == 3 then
+                card.ability.extra.x_mult = 3
+            elseif rolled == 4 then
+                -- do nothing
+            end
+        end
     },
 }
